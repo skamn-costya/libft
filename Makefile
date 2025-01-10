@@ -1,7 +1,7 @@
 NAME = libft.a
 CC = cc
 PATH_C = ./
-PATH_H = ../include/
+PATH_H = ./include/
 PATH_GNL = ./gnl/
 PATH_FT_PRINTF = ./ft_printf/
 
@@ -94,11 +94,8 @@ CCFLAGS = -Wall -Wextra -Werror
 
 $(NAME): $(OBJECTS) $(OBJECTS_GNL) $(OBJECTS_FT_PRINTF)
 	ar rcs $@ $^
-	cp -f ${NAME} ../libs/${NAME}
 
 all: $(NAME)
-
-#bonus: $(NAME)
 
 %.o: %.c
 	$(CC) -g $(CCFLAGS) -I$(PATH_H) -c $< -o $@
@@ -108,6 +105,5 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-	rm -f ../libs/${NAME}
 
 re: fclean all
