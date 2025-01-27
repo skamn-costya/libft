@@ -6,7 +6,7 @@
 /*   By: ksorokol <ksorokol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 00:13:18 by ksorokol          #+#    #+#             */
-/*   Updated: 2025/01/27 22:56:54 by ksorokol         ###   ########.fr       */
+/*   Updated: 2025/01/27 23:24:34 by ksorokol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,16 @@ static float mantisa(char *str, int idx)
 {
 	float	result;
 	int		y;
+	float	pow;
 
 	result = 0;
 	y = 1;
 	while (str[idx])
 	{
 		if (!ft_isdigit (str[idx]))
-			return (free (str), result);
-		result = result + ((str[idx] - '0') / ft_pow (10, y));
+			return (result);
+		pow = ft_pow (10, y);
+		result = result + ((str[idx] - '0') / pow);
 		idx++;
 		y++;
 	}
