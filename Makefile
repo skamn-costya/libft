@@ -66,17 +66,20 @@ ft_strcat \
 ft_isnumber \
 ft_isxdigit \
 ft_isxnumber \
-\
-ft_parrnew \
-ft_parradd_front \
-ft_parrsize \
-ft_parrlast \
-ft_parradd_back \
-ft_parrdelone \
-ft_parrgetidx \
-ft_parrclear \
-ft_parriter \
-ft_parrmap
+ft_atol \
+ft_pow \
+ft_atof
+# \
+# ft_parrnew \
+# ft_parradd_front \
+# ft_parrsize \
+# ft_parrlast \
+# ft_parradd_back \
+# ft_parrdelone \
+# ft_parrgetidx \
+# ft_parrclear \
+# ft_parriter \
+# ft_parrmap \
 
 FUNCTION_GNL = \
 get_next_line \

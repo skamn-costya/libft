@@ -6,7 +6,7 @@
 /*   By: ksorokol <ksorokol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 15:05:56 by ksorokol          #+#    #+#             */
-/*   Updated: 2025/01/25 19:22:23 by ksorokol         ###   ########.fr       */
+/*   Updated: 2025/01/27 22:24:41 by ksorokol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ char	*ft_strcat(char *dest, const char *src);
 int		ft_isnumber(char *s);
 int		ft_isxdigit(int c);
 int		ft_isxnumber(char *s);
+long	ft_atol(const char *nptr);
 
 void	ft_parradd_back(void **p_arr, void *new);
 void	ft_parradd_front(void **p_arr, void *new);
@@ -95,5 +96,7 @@ void	*ft_parrlast(void *p_arr);
 void	*ft_parrmap(void *p_arr, void *(*f)(void *), void (*del)(void *));
 void	*ft_parrnew(void *arr);
 int		ft_parrsize(void *p_arr);
+
+long	ft_pow(int x, unsigned int y);
 
 #endif
