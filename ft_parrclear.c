@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*   ft_parrclear.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksorokol <ksorokol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:02:53 by ksorokol          #+#    #+#             */
-/*   Updated: 2024/09/19 11:24:55 by ksorokol         ###   ########.fr       */
+/*   Updated: 2025/01/27 23:37:21 by ksorokol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_parrclear(void **pp_mem)
 {
-	t_list	*tmp;
+	size_t	idx;
 
-	if (!lst || !del)
+	if (!pp_mem)
 		return ;
-	while (*lst)
+	if (!pp_mem[0])
+		return (free (pp_mem));
+	idx = 0;
+	while (pp_mem[idx])
 	{
-		tmp = (*lst)->next;
-		ft_lstdelone (*lst, del);
-		*lst = tmp;
+		free (pp_mem[idx]);
+		idx++;
 	}
+	free (pp_mem);
 }

@@ -6,7 +6,7 @@
 /*   By: ksorokol <ksorokol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 15:05:56 by ksorokol          #+#    #+#             */
-/*   Updated: 2025/01/27 23:09:51 by ksorokol         ###   ########.fr       */
+/*   Updated: 2025/01/27 23:43:56 by ksorokol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,16 +86,16 @@ int		ft_isxdigit(int c);
 int		ft_isxnumber(char *s);
 long	ft_atol(const char *nptr);
 
-void	ft_parradd_back(void **p_arr, void *new);
-void	ft_parradd_front(void **p_arr, void *new);
-void	ft_parrclear(void **p_arr, void (*del)(void *));
-void	ft_parrdelone(void *p_arr, void (*del)(void *));
-int		ft_parrgetidx(void *p_arr, void *arr);
-void	ft_parriter(void *p_arr, void (*f)(void *));
-void	*ft_parrlast(void *p_arr);
-void	*ft_parrmap(void *p_arr, void *(*f)(void *), void (*del)(void *));
-void	*ft_parrnew(void *arr);
-int		ft_parrsize(void *p_arr);
+void	ft_parradd_back(void);
+void	ft_parradd_front(void);
+void	ft_parrclear(void **pp_mem);
+void	ft_parrdelone(void);
+int		ft_parrgetidx(void);
+void	ft_parriter(void);
+void	*ft_parrlast(void);
+void	*ft_parrmap(void);
+void	*ft_parrnew(void);
+int		ft_parrsize(void);
 
 long	ft_pow(int x, unsigned int y);
 float	ft_atof(const char *nptr);

@@ -6,7 +6,7 @@
 /*   By: ksorokol <ksorokol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 00:13:18 by ksorokol          #+#    #+#             */
-/*   Updated: 2025/01/27 23:24:34 by ksorokol         ###   ########.fr       */
+/*   Updated: 2025/01/27 23:33:58 by ksorokol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static void	ft_atof_sign(char *str, int *idx, int *sign)
 		(*idx)++;
 }
 
-static float mantisa(char *str, int idx)
+static float	mantisa(char *str, int idx)
 {
 	float	result;
 	int		y;

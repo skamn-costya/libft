@@ -12,19 +12,19 @@
 
 #include "libft.h"
 
-int	ft_lstgetidx(t_list *lst, t_list *slst)
-{
-	t_list	*tmp;
-	int		cntr;
+// int	ft_lstgetidx(t_list *lst, t_list *slst)
+// {
+// 	t_list	*tmp;
+// 	int		cntr;
 
-	cntr = 0;
-	tmp = lst;
-	while (tmp && tmp->next)
-	{
-		if (tmp == slst)
-			return (cntr);
-		cntr++;
-		tmp = tmp->next;
-	}
-	return (cntr);
-}
+// 	cntr = 0;
+// 	tmp = lst;
+// 	while (tmp && tmp->next)
+// 	{
+// 		if (tmp == slst)
+// 			return (cntr);
+// 		cntr++;
+// 		tmp = tmp->next;
+// 	}
+// 	return (cntr);
+// }
