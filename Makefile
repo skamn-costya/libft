@@ -1,7 +1,7 @@
 NAME = libft.a
 CC = cc
 PATH_C = ./
-PATH_H = ./include/
+PATH_H = ./
 PATH_GNL = ./gnl/
 PATH_FT_PRINTF = ./ft_printf/
 
@@ -48,6 +48,7 @@ ft_lstsize \
 ft_lstlast \
 ft_lstadd_back \
 ft_lstdelone \
+ft_lstgetidx \
 ft_lstclear \
 ft_lstiter \
 ft_lstmap \
@@ -64,7 +65,18 @@ ft_strncat \
 ft_strcat \
 ft_isnumber \
 ft_isxdigit \
-ft_isxnumber
+ft_isxnumber \
+\
+ft_parrnew \
+ft_parradd_front \
+ft_parrsize \
+ft_parrlast \
+ft_parradd_back \
+ft_parrdelone \
+ft_parrgetidx \
+ft_parrclear \
+ft_parriter \
+ft_parrmap
 
 FUNCTION_GNL = \
 get_next_line \
