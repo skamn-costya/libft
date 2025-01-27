@@ -68,7 +68,8 @@ ft_isxdigit \
 ft_isxnumber \
 ft_atol \
 ft_pow \
-ft_atof
+ft_atof \
+ft_strreplace
 # \
 # ft_parrnew \
 # ft_parradd_front \
