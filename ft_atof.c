@@ -6,7 +6,7 @@
 /*   By: ksorokol <ksorokol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 00:13:18 by ksorokol          #+#    #+#             */
-/*   Updated: 2025/01/27 22:27:19 by ksorokol         ###   ########.fr       */
+/*   Updated: 2025/01/27 22:56:54 by ksorokol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 #include <limits.h>
 
 static void		ft_atof_sign(char *str, int *idx, int *sign);
-static double	mantisa(char *str, int idx);
+static float	mantisa(char *str, int idx);
 
-int	ft_atof(const char *nptr)
+float	ft_atof(const char *nptr)
 {
 	char	*str;
 	int		sign;
-	double	result;
+	float	result;
 	int		idx;
 
 	str = ft_strtrim (nptr, " \f\n\r\t\v");
@@ -38,9 +38,8 @@ int	ft_atof(const char *nptr)
 	}
 	if (str[idx++] == '.')
 		result += mantisa (str, idx);
-	if ((result * sign) < INT_MIN || (result * sign) > INT_MAX)
-		return (free (str), 0);
-	return (free (str), result * sign);
+	result *= sign;
+	return (free (str), result);
 }
 
 static void	ft_atof_sign(char *str, int *idx, int *sign)
@@ -55,9 +54,9 @@ static void	ft_atof_sign(char *str, int *idx, int *sign)
 		(*idx)++;
 }
 
-static double mantisa(char *str, int idx)
+static float mantisa(char *str, int idx)
 {
-	double	result;
+	float	result;
 	int		y;
 
 	result = 0;
