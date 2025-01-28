@@ -80,7 +80,9 @@ ft_parrdelone \
 ft_parrgetidx \
 ft_parrclear \
 ft_parriter \
-ft_parrmap
+ft_parrmap \
+\
+ft_new_strcmp
 
 FUNCTION_GNL = \
 get_next_line \
