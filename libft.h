@@ -6,7 +6,7 @@
 /*   By: ksorokol <ksorokol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 15:05:56 by ksorokol          #+#    #+#             */
-/*   Updated: 2025/01/27 23:43:56 by ksorokol         ###   ########.fr       */
+/*   Updated: 2025/01/28 17:21:53 by ksorokol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ void	ft_parriter(void);
 void	*ft_parrlast(void);
 void	*ft_parrmap(void);
 void	*ft_parrnew(void);
-int		ft_parrsize(void);
+size_t	ft_parrsize(void **pp_mem);
 
 long	ft_pow(int x, unsigned int y);
 float	ft_atof(const char *nptr);

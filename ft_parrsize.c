@@ -6,23 +6,23 @@
 /*   By: ksorokol <ksorokol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 12:42:56 by ksorokol          #+#    #+#             */
-/*   Updated: 2025/01/27 23:41:40 by ksorokol         ###   ########.fr       */
+/*   Updated: 2025/01/28 17:21:43 by ksorokol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// int	ft_lstsize(t_list *lst)
-// {
-// 	t_list	*tmp;
-// 	int		cntr;
+size_t	ft_parrsize(void **pp_mem)
+{
+	size_t	result;
+	void	**pp_mem_;
 
-// 	cntr = 0;
-// 	tmp = lst;
-// 	while (tmp)
-// 	{
-// 		cntr++;
-// 		tmp = tmp->next;
-// 	}
-// 	return (cntr);
-// }
+	result = 0;
+	pp_mem_ = pp_mem;
+	while (pp_mem_)
+	{
+		result++;
+		pp_mem_++;
+	}
+	return (result);
+}
