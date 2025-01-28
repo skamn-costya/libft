@@ -6,7 +6,7 @@
 /*   By: ksorokol <ksorokol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 12:42:56 by ksorokol          #+#    #+#             */
-/*   Updated: 2025/01/28 17:21:43 by ksorokol         ###   ########.fr       */
+/*   Updated: 2025/01/28 19:16:45 by ksorokol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_parrsize(void **pp_mem)
 
 	result = 0;
 	pp_mem_ = pp_mem;
-	while (pp_mem_)
+	while (*pp_mem_)
 	{
 		result++;
 		pp_mem_++;
