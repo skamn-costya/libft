@@ -6,7 +6,7 @@
 /*   By: ksorokol <ksorokol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 18:30:24 by ksorokol          #+#    #+#             */
-/*   Updated: 2025/01/28 18:55:33 by ksorokol         ###   ########.fr       */
+/*   Updated: 2025/01/28 19:10:05 by ksorokol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_new_strcmp(char *str1, char *str2, char free_ixd)
 	len1 = ft_strlen(str1);
 	len2 = ft_strlen(str2);
 	str = (char *) malloc ((len1 + len2 + 1) * sizeof (char));
-	if (str)
+	if (!str)
 		return (NULL);
 	str[len1 + len2] = '\0';
 	ft_memcpy(str, str1, len1);
