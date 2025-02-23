@@ -6,7 +6,7 @@
 /*   By: ksorokol <ksorokol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 00:13:18 by ksorokol          #+#    #+#             */
-/*   Updated: 2025/01/27 23:33:58 by ksorokol         ###   ########.fr       */
+/*   Updated: 2025/02/23 18:39:07 by ksorokol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include <limits.h>
 
 static void		ft_atof_sign(char *str, int *idx, int *sign);
-static float	mantisa(char *str, int idx);
+static float	mantisa(char *str, int idx, float result);
+static float	e(char *str, int idx, float result);
 
 float	ft_atof(const char *nptr)
 {
@@ -37,7 +38,7 @@ float	ft_atof(const char *nptr)
 		idx++;
 	}
 	if (str[idx++] == '.')
-		result += mantisa (str, idx);
+	result = mantisa (str, idx, result);
 	result *= sign;
 	return (free (str), result);
 }
@@ -54,22 +55,33 @@ static void	ft_atof_sign(char *str, int *idx, int *sign)
 		(*idx)++;
 }
 
-static float	mantisa(char *str, int idx)
+static float	mantisa(char *str, int idx, float result)
 {
-	float	result;
 	int		y;
 	float	pow;
 
-	result = 0;
 	y = 1;
 	while (str[idx])
 	{
 		if (!ft_isdigit (str[idx]))
+		{
+			if (str[idx] == 'e' || str[idx] == 'E')
+				return (e(str, ++idx, result));	
 			return (result);
+		}
 		pow = ft_pow (10, y);
-		result = result + ((str[idx] - '0') / pow);
+		result += ((str[idx] - '0') / pow);
 		idx++;
 		y++;
 	}
+	return (result);
+}
+
+static float	e(char *str, int idx, float result)
+{
+	int pow;
+
+	pow = ft_atoi(&str[idx]);
+	result *= ft_powf(10, pow);
 	return (result);
 }

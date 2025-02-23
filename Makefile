@@ -70,6 +70,7 @@ ft_atol \
 ft_pow \
 ft_atof \
 ft_strreplace \
+ft_powf \
 \
 ft_parrnew \
 ft_parradd_front \
