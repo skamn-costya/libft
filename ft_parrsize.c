@@ -6,23 +6,23 @@
 /*   By: ksorokol <ksorokol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 12:42:56 by ksorokol          #+#    #+#             */
-/*   Updated: 2025/01/28 19:16:45 by ksorokol         ###   ########.fr       */
+/*   Updated: 2025/02/24 15:14:47 by ksorokol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_parrsize(void **pp_mem)
+size_t	ft_pparrsize(void **pp_arr)
 {
-	size_t	result;
-	void	**pp_mem_;
+	size_t	idx;
+	void	**pp_arr_;
 
-	result = 0;
-	pp_mem_ = pp_mem;
-	while (*pp_mem_)
+	idx = 0;
+	pp_arr_ = pp_arr;
+	while (*pp_arr_)
 	{
-		result++;
-		pp_mem_++;
+		idx++;
+		pp_arr_++;
 	}
-	return (result);
+	return (idx);
 }
