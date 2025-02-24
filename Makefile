@@ -74,15 +74,15 @@ ft_powf \
 \
 ft_parrnew \
 ft_parradd_front \
-ft_parrsize \
+ft_pparrsize \
 ft_parrlast \
 ft_parradd_back \
 ft_parrdelone \
 ft_parrgetidx \
-ft_parrclear \
+ft_pparrclear \
 ft_parriter \
 ft_parrmap \
-ft_parrlen \
+ft_parrsize \
 ft_new_strcmp
 
 FUNCTION_GNL = \

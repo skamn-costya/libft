@@ -6,13 +6,13 @@
 /*   By: ksorokol <ksorokol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:02:53 by ksorokol          #+#    #+#             */
-/*   Updated: 2025/01/27 23:37:21 by ksorokol         ###   ########.fr       */
+/*   Updated: 2025/02/24 15:36:13 by ksorokol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_parrclear(void **pp_mem)
+void	ft_pparrclear(void **pp_mem)
 {
 	size_t	idx;
 
