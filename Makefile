@@ -82,7 +82,7 @@ ft_parrgetidx \
 ft_parrclear \
 ft_parriter \
 ft_parrmap \
-\
+ft_parrlen \
 ft_new_strcmp
 
 FUNCTION_GNL = \
